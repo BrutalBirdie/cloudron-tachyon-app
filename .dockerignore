@@ -1,4 +1,5 @@
 .git
+.github
 .gitignore
 .dockerignore
 node_modules

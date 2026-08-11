@@ -1,2 +1,1 @@
-External domains can be added by logging into SnappyMail as an administrator.
-
+External domains can be added by logging into Tachyon as an administrator.

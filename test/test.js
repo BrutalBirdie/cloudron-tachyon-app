@@ -90,7 +90,7 @@ describe('Application life cycle test', function () {
     }
 
     async function viewPGP() {
-        await goto(`https://${app.fqdn}/#/settings/openpgp`, 'Import Key');
+        await goto(`https://${app.fqdn}/#/settings/security`, 'Import Key');
     }
 
     async function checkDataAccess() {
@@ -104,7 +104,14 @@ describe('Application life cycle test', function () {
         await goto(`https://${app.fqdn}/#/settings/filters`, 'xpath=//a[contains(text(), "Add a Script")]');
     }
 
+    async function checkTachyon() {
+        const response = await superagent.get(`https://${app.fqdn}/`);
+        assert.match(response.text, /tachyon\/v\/\d+\.\d+\.\d+\//, 'index does not serve Tachyon assets');
+    }
+
     it('install app', cloudronCli.install);
+
+    it('serves tachyon', checkTachyon);
 
     it('can login', login.bind(null, MAILBOX1, true /* set identity */));
     it('can send mail', sendMail.bind(null, subject));
@@ -145,31 +152,6 @@ describe('Application life cycle test', function () {
     it('can logout', clearCache);
 
     it('can login', login.bind(null, MAILBOX2, false /* setIdentity */));
-    it('get mail', getMail.bind(null, subject));
-    it('check filters', checkFilters);
-    it('can logout', clearCache);
-
-    it('can access admin', adminLogin);
-
-    it('cannot access data', checkDataAccess);
-
-    it('uninstall app', cloudronCli.uninstall);
-
-    // test update
-    it('can install app for update', cloudronCli.appstoreInstall);
-
-    it('can login', login.bind(null, MAILBOX1, true /* setIdentity */));
-    it('can send mail', sendMail.bind(null, subject));
-    it('add contact', addContact);
-    it('can enable admin', enableAdmin);
-
-    it('can update', cloudronCli.update);
-
-    it('can login', login.bind(null, MAILBOX1, false /* setIdentity */));
-    it('get contact', getContact);
-    it('can logout', clearCache);
-
-    it('can login', login.bind(null, MAILBOX2, true /* setIdentity */));
     it('get mail', getMail.bind(null, subject));
     it('check filters', checkFilters);
     it('can logout', clearCache);

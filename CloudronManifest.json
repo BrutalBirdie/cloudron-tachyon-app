@@ -1,12 +1,12 @@
 {
-  "id": "eu.snappymail.cloudronapp",
-  "title": "SnappyMail",
-  "author": "SnappyMail Developers",
+  "id": "com.github.kimusan.tachyon.cloudronapp",
+  "title": "Tachyon",
+  "author": "Kim Schulz",
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG.md",
   "tagline": "Your webmail client",
-  "version": "1.26.1",
-  "upstreamVersion": "2.38.2",
+  "version": "1.0.0",
+  "upstreamVersion": "3.2.2",
   "healthCheckPath": "/",
   "httpPort": 8000,
   "addons": {
@@ -14,8 +14,8 @@
     "email": {}
   },
   "manifestVersion": 2,
-  "website": "https://snappymail.eu/",
-  "contactEmail": "support@cloudron.io",
+  "website": "https://github.com/kimusan/Tachyon",
+  "contactEmail": "brutalbirdie@gmail.com",
   "icon": "file://logo.png",
   "tags": [
     "webmail",
@@ -26,14 +26,6 @@
     "gmail",
     "fastmail"
   ],
-  "mediaLinks": [
-    "https://screenshots.cloudron.io/eu.snappymail.cloudronapp/1.png",
-    "https://screenshots.cloudron.io/eu.snappymail.cloudronapp/2.png",
-    "https://screenshots.cloudron.io/eu.snappymail.cloudronapp/3.png",
-    "https://screenshots.cloudron.io/eu.snappymail.cloudronapp/4.png"
-  ],
   "postInstallMessage": "file://POSTINSTALL.md",
-  "minBoxVersion": "7.1.2",
-  "forumUrl": "https://forum.cloudron.io/category/138/snappymail",
-  "documentationUrl": "https://docs.cloudron.io/packages/snappymail/"
+  "minBoxVersion": "7.1.2"
 }

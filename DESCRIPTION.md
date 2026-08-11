@@ -1,11 +1,10 @@
 ### About
 
-SnappyMail is a Simple, modern, lightweight & fast web-based email client.
+Tachyon is a fast, secure and modern web-based email client.
 
-Mobile booting with ~144 KB download (using Brotli) and up to 99% performance grade by Lighthouse.
-
-This is a fork of the much appreciated RainLoop, but with massive changes to be compatible with (mobile) browsers in 2020.
-[Here's a short comparison](https://snappymail.eu/comparison.html).
+It is a fork of [SnappyMail](https://github.com/the-djmaze/snappymail), which itself forked RainLoop
+Webmail Community edition. Existing SnappyMail installations upgrade directly to Tachyon — the data
+directory and configuration are unchanged.
 
 ### Features
  * Modern user interface.
@@ -14,8 +13,9 @@ This is a fork of the much appreciated RainLoop, but with massive changes to be 
  * Minimalistic resources requirements.
  * Direct access to mail server is used (mails are not stored locally on web server).
  * Allows for adding multiple accounts to primary one, simultaneous access to different accounts in different browser tabs is supported. Additional identities.
+ * Undo send with a configurable delay before the message is handed to SMTP.
+ * Unread count badge across all configured accounts.
  * Administrative panel for configuring main options.
- * Really simple installation and update (the product is updated from admin panel).
  * Managing folders list.
  * Simple look'n'feel customization.
  * Extending functionality with plugins installed through admin panel.
@@ -23,23 +23,18 @@ This is a fork of the much appreciated RainLoop, but with massive changes to be 
  * Drag'n'drop for mails and attachments.
  * Keyboard shortcuts support.
  * Autocompletion of e-mail addresses.
+ * OpenPGP support via OpenPGP.js, GnuPG and Mailvelope.
 
-### Modifications
+### Changes from SnappyMail
 
-This fork of RainLoop has the following changes:
+* PHP 8.2 minimum, namespaces moved from `RainLoop\`/`SnappyMail\` to `Tachyon\` (compatibility shims keep existing plugins working)
+* `Permissions-Policy` header denying camera, microphone, geolocation, payment and USB
+* Subresource Integrity hashes for all static JS and CSS assets
+* Fixed Content-Security-Policy reporting via the `Reporting-Endpoints` header
+* Undo send (Off / 5 / 10 / 20 / 30 seconds), configurable per user
+* Multi-account unread count badge on the account switcher
 
-* Privacy/GDPR friendly (no: Social, Gravatar, Facebook, Google, Twitter, DropBox, OwnCloud, X-Mailer)
-* Admin uses `password_hash`/`password_verify`
-* Auth failed attempts written to syslog
-* ES2018
-* Dark mode
-* Added option to remove background/font colors from messages for real "dark mode"
-* Removed BackwardCapability (class \RainLoop\Account)
-* Removed ChangePassword (re-implemented as plugin)
-* Removed POP3 support
-* Removed background video support
-* Removed Sentry (Application Monitoring and Error Tracking Software)
-* Removed Spyc yaml
-* Replaced gulp-uglify with gulp-terser
-* CRLF => LF line endings
+### Privacy
 
+Inherited from SnappyMail: no Social, Gravatar, Facebook, Google, Twitter, DropBox, OwnCloud or
+X-Mailer integrations, and no Sentry application monitoring.

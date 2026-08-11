@@ -1,4 +1,8 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["local>devops/renovator//default.renovate.json5"]
+    "extends": [
+        "config:recommended",
+        // picks up the `# renovate:` annotated ARG TACHYON_VERSION in the Dockerfile
+        "customManagers:dockerfileVersions"
+    ]
 }

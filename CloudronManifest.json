@@ -27,5 +27,12 @@
     "fastmail"
   ],
   "postInstallMessage": "file://POSTINSTALL.md",
-  "minBoxVersion": "7.1.2"
+  "minBoxVersion": "9.2.0",
+  "iconUrl": "",
+  "packagerName": "BrutalBirdie",
+  "packagerUrl": "https://github.com/BrutalBirdie/cloudron-tachyon-app",
+  "mediaLinks": [
+    "https://example.com/screenshot.png"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/BrutalBirdie/cloudron-tachyon-app/refs/heads/master/logo.png"
 }

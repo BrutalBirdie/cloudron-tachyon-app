@@ -12,6 +12,12 @@ RUN a2disconf other-vhosts-access-log
 ADD apache/tachyon.conf /etc/apache2/sites-enabled/tachyon.conf
 RUN echo "Listen 8000" > /etc/apache2/ports.conf
 
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        libapache2-mod-php8.3 php8.3-cli php8.3-curl php8.3-gd php8.3-gnupg \
+        php8.3-intl php8.3-mbstring php8.3-opcache php8.3-sqlite3 php8.3-xml php8.3-zip && \
+    rm -rf /var/lib/apt/lists/*
+
 # mod_php config
 RUN a2enmod rewrite
 RUN crudini --set /etc/php/8.3/apache2/php.ini PHP upload_max_filesize 25M && \

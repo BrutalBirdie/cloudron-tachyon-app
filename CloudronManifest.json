@@ -32,7 +32,8 @@
   "packagerName": "BrutalBirdie",
   "packagerUrl": "https://github.com/BrutalBirdie/cloudron-tachyon-app",
   "mediaLinks": [
-    "https://example.com/screenshot.png"
+    "https://raw.githubusercontent.com/BrutalBirdie/cloudron-tachyon-app/refs/heads/master/screenshots/1.png",
+    "https://raw.githubusercontent.com/BrutalBirdie/cloudron-tachyon-app/refs/heads/master/screenshots/2.png"
   ],
   "iconUrl": "https://raw.githubusercontent.com/BrutalBirdie/cloudron-tachyon-app/refs/heads/master/logo.png"
 }

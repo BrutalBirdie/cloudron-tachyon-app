@@ -5,8 +5,8 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG.md",
   "tagline": "Your webmail client",
-  "version": "1.0.0",
-  "upstreamVersion": "3.2.2",
+  "version": "1.0.1",
+  "upstreamVersion": "3.2.5",
   "healthCheckPath": "/",
   "httpPort": 8000,
   "addons": {

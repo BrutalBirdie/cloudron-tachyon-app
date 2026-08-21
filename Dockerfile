@@ -30,7 +30,7 @@ RUN ln -s /app/data/php.ini /etc/php/8.3/apache2/conf.d/99-cloudron.ini && \
     ln -s /app/data/php.ini /etc/php/8.3/cli/conf.d/99-cloudron.ini
 
 # renovate: datasource=github-releases depName=kimusan/Tachyon versioning=semver extractVersion=^v(?<version>.+)$
-ARG TACHYON_VERSION=3.2.2
+ARG TACHYON_VERSION=3.2.5
 
 RUN wget https://github.com/kimusan/Tachyon/releases/download/v${TACHYON_VERSION}/tachyon-${TACHYON_VERSION}.zip -O /tmp/tachyon.zip && \
     unzip /tmp/tachyon.zip -d /app/code && \

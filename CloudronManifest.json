@@ -5,8 +5,8 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG.md",
   "tagline": "Your webmail client",
-  "version": "1.0.1",
-  "upstreamVersion": "3.2.5",
+  "version": "1.1.0",
+  "upstreamVersion": "4.0.1",
   "healthCheckPath": "/",
   "httpPort": 8000,
   "addons": {
@@ -28,7 +28,6 @@
   ],
   "postInstallMessage": "file://POSTINSTALL.md",
   "minBoxVersion": "9.2.0",
-  "iconUrl": "",
   "packagerName": "BrutalBirdie",
   "packagerUrl": "https://github.com/BrutalBirdie/cloudron-tachyon-app",
   "mediaLinks": [

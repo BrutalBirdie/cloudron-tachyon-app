@@ -10,3 +10,7 @@
 [1.1.0]
 * Update to Tachyon 4.0.1
 * [Full changelog](https://github.com/kimusan/Tachyon/releases/tag/v4.0.1)
+
+[1.1.1]
+* Update to Tachyon 4.0.9
+* [Full changelog](https://github.com/kimusan/Tachyon/releases/tag/v4.0.9)

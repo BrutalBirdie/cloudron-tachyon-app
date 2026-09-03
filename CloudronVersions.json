@@ -132,6 +132,50 @@
             "creationDate": "Tue, 25 Aug 2026 09:52:54 GMT",
             "ts": "Tue, 25 Aug 2026 09:52:54 GMT",
             "publishState": "published"
+        },
+        "1.1.1": {
+            "manifest": {
+                "id": "com.github.kimusan.tachyon.cloudronapp",
+                "title": "Tachyon",
+                "author": "Kim Schulz",
+                "description": "### About\n\nTachyon is a fast, secure and modern web-based email client.\n\nIt is a fork of [SnappyMail](https://github.com/the-djmaze/snappymail), which itself forked RainLoop\nWebmail Community edition. Existing SnappyMail installations upgrade directly to Tachyon — the data\ndirectory and configuration are unchanged.\n\n### Features\n * Modern user interface.\n * Complete support of IMAP and SMTP protocols including SSL and STARTTLS.\n * Sieve scripts (Filters and vacation message).\n * Minimalistic resources requirements.\n * Direct access to mail server is used (mails are not stored locally on web server).\n * Allows for adding multiple accounts to primary one, simultaneous access to different accounts in different browser tabs is supported. Additional identities.\n * Undo send with a configurable delay before the message is handed to SMTP.\n * Unread count badge across all configured accounts.\n * Administrative panel for configuring main options.\n * Managing folders list.\n * Simple look'n'feel customization.\n * Extending functionality with plugins installed through admin panel.\n * Perfect rendering of complex HTML mails.\n * Drag'n'drop for mails and attachments.\n * Keyboard shortcuts support.\n * Autocompletion of e-mail addresses.\n * OpenPGP support via OpenPGP.js, GnuPG and Mailvelope.\n\n### Changes from SnappyMail\n\n* PHP 8.2 minimum, namespaces moved from `RainLoop\\`/`SnappyMail\\` to `Tachyon\\` (compatibility shims keep existing plugins working)\n* `Permissions-Policy` header denying camera, microphone, geolocation, payment and USB\n* Subresource Integrity hashes for all static JS and CSS assets\n* Fixed Content-Security-Policy reporting via the `Reporting-Endpoints` header\n* Undo send (Off / 5 / 10 / 20 / 30 seconds), configurable per user\n* Multi-account unread count badge on the account switcher\n\n### Privacy\n\nInherited from SnappyMail: no Social, Gravatar, Facebook, Google, Twitter, DropBox, OwnCloud or\nX-Mailer integrations, and no Sentry application monitoring.\n",
+                "changelog": "* Update to Tachyon 4.0.9\n* [Full changelog](https://github.com/kimusan/Tachyon/releases/tag/v4.0.9)\n",
+                "tagline": "Your webmail client",
+                "version": "1.1.1",
+                "upstreamVersion": "4.0.9",
+                "healthCheckPath": "/",
+                "httpPort": 8000,
+                "addons": {
+                    "localstorage": {},
+                    "email": {}
+                },
+                "manifestVersion": 2,
+                "website": "https://github.com/kimusan/Tachyon",
+                "contactEmail": "brutalbirdie@gmail.com",
+                "icon": "file://logo.png",
+                "tags": [
+                    "webmail",
+                    "mail",
+                    "email",
+                    "imap",
+                    "smtp",
+                    "gmail",
+                    "fastmail"
+                ],
+                "postInstallMessage": "External domains can be added by logging into Tachyon as an administrator.\n",
+                "minBoxVersion": "9.2.0",
+                "packagerName": "BrutalBirdie",
+                "packagerUrl": "https://github.com/BrutalBirdie/cloudron-tachyon-app",
+                "mediaLinks": [
+                    "https://raw.githubusercontent.com/BrutalBirdie/cloudron-tachyon-app/refs/heads/master/screenshots/1.png",
+                    "https://raw.githubusercontent.com/BrutalBirdie/cloudron-tachyon-app/refs/heads/master/screenshots/2.png"
+                ],
+                "iconUrl": "https://raw.githubusercontent.com/BrutalBirdie/cloudron-tachyon-app/refs/heads/master/logo.png",
+                "dockerImage": "brutalbirdie/com.github.kimusan.tachyon.cloudronapp:1.1.1"
+            },
+            "creationDate": "Thu, 03 Sep 2026 09:18:47 GMT",
+            "ts": "Thu, 03 Sep 2026 09:18:47 GMT",
+            "publishState": "published"
         }
     }
 }
